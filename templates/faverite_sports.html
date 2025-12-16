@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Template</title>
+</head>
+<body>
+    <a href="/home">home</a> |
+    <a href="/about">About Me</a> |
+    <a href="/favorite_foods">Favorite Foods</a> |
+    <a href="/favorite_sports">Favorite Sports</a>\
+     
+    {% block content %}{% endblock %}
+
+
+     <h1>{{ title }}</h1>
+     <hr>
+     <h2>My favorite sports are:</h2>
+     <ol>
+        {% for s in sports %}
+            <li><h3>{{ s }}</h3></li>
+        {% endfor %}
+     </ol>
+     <p>Welcome to my website!</p>
+</body>
+</html>

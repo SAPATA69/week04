@@ -1,0 +1,46 @@
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Template</title>
+</head>
+<body>
+   <!--<a href="/home">home</a> |
+    <a href="/about">About Me</a> |
+    <a href="/favorite_foods">Favorite Foods</a> |
+    <a href="/favorite_sports">Favorite Sports</a> -->
+
+    <a href="{{ url_for (index)}}">home</a> |
+    <a href="{{ url_for (about)}}">About Me</a> |
+    <a href="{{ url_for (faverite_foods)}}">Favorite Foods</a> |
+    <a href="{{ url_for (faverite_sport)}}">Favorite Sports</a> 
+
+     <h1>{{ title }}</h1>
+     <hr>
+     <h2>My name is {{ name }}</h2>
+     <h2>My email address is {{ email }}</h2>
+     <h2>My mobile phone number is {{ mobile }}</h2>
+     
+     {% if age >= 50 %}
+         <h2>I am older</h2>
+     {% else %}
+         <h2>I am younger</h2>
+     {% endif %}
+
+     
+</body>
+</html>
+
