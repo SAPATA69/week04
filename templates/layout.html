@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flask Template - fblock</title>
+    <title>{% block title %}Flask Template{% endblock %}</title>
 </head>
 <body>
-    <a href="/">Home</a> |
-    <a href="/about">About Me</a> |
-    <a href="/favorite_foods">Favorite Foods</a> |
-    <a href="/favorite_sports">Favorite Sports</a>
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a> |
+        <a href="{{ url_for('about') }}">About Me</a> |
+        <a href="{{ url_for('favorite_foods') }}">Favorite Foods</a> |
+        <a href="{{ url_for('favorite_sports') }}">Favorite Sports</a>
+    </nav>
+    <hr>
     
     {% block content %}{% endblock %}
-
-    <h1>{{ title }}</h1>
+    
     <hr>
-    <p>Welcome to my website!</p>
+    <footer>
+        <p>&copy; 2025 My Website</p>
+    </footer>
 </body>
 </html>
