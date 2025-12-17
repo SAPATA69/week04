@@ -27,5 +27,11 @@ def favorite_sports():
     sports = ["Football", "Basketball", "Swimming", "Tennis", "Badminton"]
     return render_template('favorite_sports.html', title=title, sports=sports)
 
+@app.route('/favorite_movie')
+def favorite_movie():
+    title = "Favorite Movies page"
+    movies = ["Stranger Things", "The Collection (2009-2012)", "Leatherface 2017", "Friday the 13th", "The Strangers"]
+    return render_template('favorite_movie.html', title=title, movies=movies)
+
 if __name__ == '__main__':
     app.run(debug=True)

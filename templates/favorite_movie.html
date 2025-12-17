@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+     <h1>{{ title }}</h1>
+     <h2>My favorite movies are:</h2>
+     <ol>
+        {% for movie in movies %}
+            <li><h3>{{ movie }}</h3></li>
+        {% endfor %}
+     </ol>
+{% endblock %}
