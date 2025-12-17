@@ -1,4 +1,18 @@
-<!DOCTYPE html>
+{% extends 'layout.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+     <h1>{{ title }}</h1>
+     <h2>My favorite foods are:</h2>
+     <ol>
+        {% for food in foods %}
+            <li><h3>{{ food }}</h3></li>
+        {% endfor %}
+     </ol>
+{% endblock %}
+
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -21,4 +35,4 @@
      </ol>
      
 </body>
-</html>
+</html>-->

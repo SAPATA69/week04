@@ -3,6 +3,7 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route('/')
+@app.route('/home')
 def index():
     return render_template('index.html', title="My Home Page")
 
@@ -14,17 +15,17 @@ def about():
     age = 50
     return render_template('about.html', title="About Us", name=name, email=email, mobile=mobile, age=age)
 
-@app.route('/faverite/food')
-def faverite_food():
+@app.route('/favorite_foods')
+def favorite_foods():
     title = "Favorite Foods page"
     foods = ["Pizza", "Sushi", "Tacos", "Pasta", "Ice Cream"]
-    return render_template('faverite_foods.html', title=title, foods=foods)
+    return render_template('favorite_foods.html', title=title, foods=foods)
 
-@app.route('/faverite/sport')
-def faverite_sport():
-    title = "Favorite sport page"
+@app.route('/favorite_sports')
+def favorite_sports():
+    title = "Favorite Sports page"
     sports = ["Football", "Basketball", "Swimming", "Tennis", "Badminton"]
-    return render_template('faverite_sport.html', title=title, sports=sports)
+    return render_template('favorite_sports.html', title=title, sports=sports)
 
 if __name__ == '__main__':
     app.run(debug=True)
